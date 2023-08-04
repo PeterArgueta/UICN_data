@@ -79,7 +79,7 @@
             document.body.appendChild(downloadButton);
             }
             // Fetch the CSV file and process it
-            fetch("https://raw.githubusercontent.com/Climatologia-INSIVUMEH/monthly_data_by_station_csv/main/outputcsv/ALAMEDA ICTA.csv")
+            fetch("https://raw.githubusercontent.com/PeterArgueta/UICN_data/master/monthly_data_by_station_csv/outputcsv/ALAMEDA ICTA.csv")
             .then(res => res.text())
             .then(text => processData(text));
         </script>

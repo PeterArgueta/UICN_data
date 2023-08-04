@@ -46,7 +46,7 @@
             background-color: #005ca9;
             }
         </style>
-        <h1>ESTACIÓN HUEHUETENANGO </h1>
+        <h1>ESTACIÓN EFA SAN MARCOS </h1>
         <script type="text/javascript">
             function processData(csv) {
             let data = csv.split(/\r|\n/).map(v => v.split(','));
@@ -70,7 +70,7 @@
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.setAttribute('href', url);
-                a.setAttribute('download', 'Data_mensual_HUEHUETENANGO.csv');
+                a.setAttribute('download', 'Data_mensual_EFA SAN MARCOS.csv');
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -79,7 +79,7 @@
             document.body.appendChild(downloadButton);
             }
             // Fetch the CSV file and process it
-            fetch("https://raw.githubusercontent.com/PeterArgueta/UICN_data/master/monthly_data_by_station_csv/outputcsv/HUEHUETENANGO.csv")
+            fetch("https://raw.githubusercontent.com/PeterArgueta/UICN_data/master/monthly_data_by_station_csv/outputcsv/EFA SAN MARCOS.csv")
             .then(res => res.text())
             .then(text => processData(text));
         </script>

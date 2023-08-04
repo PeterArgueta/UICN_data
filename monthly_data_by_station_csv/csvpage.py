@@ -7,10 +7,10 @@ import pandas as pd
 directory="monthly_data_by_station_csv/outputhtml/"
 
 
-df = pd.read_csv('database.csv', delimiter=',', header=0)
+df = pd.read_csv('salida_final.csv', delimiter=',', header=0)
 
-df[['Nombre']] = df[['Nombre']].replace('_', ' ', regex=True)
-estaciones = df["Nombre"].unique()
+df[['estacion']] = df[['estacion']].replace('_', ' ', regex=True)
+estaciones = df["estacion"].unique()
 #
 
 
@@ -96,7 +96,7 @@ for estacion in estaciones:
             document.body.appendChild(downloadButton);
             }
             // Fetch the CSV file and process it
-            fetch("https://raw.githubusercontent.com/Climatologia-INSIVUMEH/monthly_data_by_station_csv/main/outputcsv/'''+estacion+'''.csv")
+            fetch("https://raw.githubusercontent.com/PeterArgueta/UICN_data/master/monthly_data_by_station_csv/outputcsv/'''+estacion+'''.csv")
             .then(res => res.text())
             .then(text => processData(text));
         </script>
